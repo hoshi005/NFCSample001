@@ -14,7 +14,7 @@ struct TopView: View {
     
     var body: some View {
         Button("読み取り開始") {
-            self.viewModel.read()
+            self.viewModel.startPolling()
         }
         .alert(isPresented: $viewModel.hasError) {
             Alert(
